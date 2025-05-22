@@ -13,8 +13,8 @@ export default function () {
     root.style.setProperty("--primary-color", "#4dff91");
     home.style.color = "#070708";
     scroll.style.color = "#070708";
-    icon.setAttribute("src", "/TechSustain/assets/images/instagram4.png"),
-    icon2.setAttribute("src", "/TechSustain/assets/images/github2.png"),
+    icon.setAttribute("src", "./assets/images/instagram4.png"),
+    icon2.setAttribute("src", "./assets/images/github2.png"),
     main.dataset.theme = "light";
   } else {
     root.style.setProperty("--bg-color", "#070708"); //entrando no root do css e pegando a propriedade do style
@@ -23,8 +23,8 @@ export default function () {
     root.style.setProperty("--primary-color", "#4dff91");
     home.style.color = "#f1f5f9";
     scroll.style.color = "#f1f5f9";
-    icon.setAttribute("src", "/TechSustain/assets/images/instagram3.png"),
-    icon2.setAttribute("src", "/TechSustain/assets/images/github.png"),
+    icon.setAttribute("src", "./assets/images/instagram3.png"),
+    icon2.setAttribute("src", "./assets/images/github.png"),
     main.dataset.theme = "dark";
   }
 }
