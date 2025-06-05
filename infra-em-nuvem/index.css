@@ -69,55 +69,68 @@ a {
     margin-top: 1rem;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
+    padding-left: 0rem;
     padding-top: 2rem;
 }
 
 .section-container {
     display: flex;
-    flex-wrap: wrap; /* permite quebra de linha */
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     gap: 2rem;
     padding: 2rem;
 }
 
-.section {
-    flex: 1 1 450px; /* Cresce, encolhe e largura base */
-    max-width: 500px;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-sizing: border-box;
+.section,
+.section2 {
+    display: block;
+    padding: 1rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .section__title,
 .section__title2 {
-    font-size: 1.9rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 500;
     margin: 2rem 0;
+    max-width: 723px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section__text,
+.section__text-inline {
+    font-size: 1.30rem;
+    font-weight: 200;
+    line-height: 1.8;
+    margin: 1.5rem 0;
+    padding: 0 1.5rem;
+    max-width: 900px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section__img {
     border-radius: 0.75rem;
     box-shadow: 0 1rem 2rem -0.5rem rgba(20, 116, 180, 0.25);
-    width: 450px;
-    margin: 1.5rem auto;
-    max-width: 600px;
-    text-align: left;
+    width: 100%; /* A imagem vai ocupar toda a largura disponível do seu contêiner */
+    max-width: 900px; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 1.5rem auto; /* Centraliza a imagem, mas dentro de um contêiner controlado */
+    display: block; /* Garante que a imagem seja um bloco e respeite o 'margin auto' */
 }
 
 .section__img-inline{
-    width: 30%;
-}
-
-.section__text,
-.section__text-inline {
-    font-size: 1rem;
-    line-height: 1.75;
-    margin: 1rem auto;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    max-width: 600px;
-    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+    display: block;
+    align-items: center;
+    max-width: 700px;
 }
 
 .footer {
@@ -126,6 +139,11 @@ a {
   align-items: center;
   gap: 0.5rem; /* espaço entre os ícones */
   padding: 0.5rem;
+}
+
+.footer a:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 #themeSwitcher {
@@ -147,6 +165,7 @@ button {
     padding: 0.9rem 3rem;
     transition: 0.15s;
     margin: 3.0rem auto;
+    margin-left: 0rem;
     display: inline;
     opacity: 84%;
 }
@@ -161,11 +180,6 @@ button {
     opacity: 95%;
 }
 
-.gallery__img{
-    border-radius: 0.75rem;
-    height: 21.5rem;
-}
-
 .scroll{
     display: block;
     color: white;
@@ -175,11 +189,14 @@ button {
     cursor: pointer;
 }
 
+.gallery__img{
+    border-radius: 0.75rem;
+    height: 21.5rem;
+}
+
 .icon0{
     width: 21.5px;
     height: 21.5px;
-    margin-top: 0;
-    padding-bottom: 0;
     margin-bottom: 0.5rem;
     margin-left: auto;
     margin-right: auto;
@@ -208,14 +225,6 @@ button {
         padding-right: 0rem;
         padding-left: 0.65rem;
       }
-    .hero__text{
-        font-size: 0.9rem;
-        font-weight: 400;
-        padding-left: 1.5rem;
-        text-align: center;
-        flex-direction: column;
-        padding-top: 3rem;
-    }
     .homeFor {
         display: block;
         margin-top: 5px;
@@ -225,6 +234,14 @@ button {
         text-decoration: none;
         opacity: 95%;
         padding-left: 0.8rem;
+    }
+    .hero__text{
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding-left: 1.5rem;
+        text-align: center;
+        flex-direction: column;
+        padding-top: 3rem;
     }
     .artigo {
         color: rgb(224, 88, 88);
@@ -266,9 +283,9 @@ button {
     }
     .section__text-inline,
     .section__text{
-        display: inline;
-        font-size: 1.2rem; /* Adjust the font size as needed */
-        line-height: 1.5; /* Adjust the line height as needed */
+        display: block;
+        font-size: 1.2rem;
+        line-height: 1.5;
         text-align: center;
         padding-left: 0;
         padding-right: 0;
